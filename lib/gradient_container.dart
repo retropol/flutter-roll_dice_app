@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/roll_dice.dart';
 import 'package:roll_dice/styled_text.dart';
 
 var ortala =
@@ -11,12 +12,15 @@ Alignment?
 class GradientContainer extends StatelessWidget {
   GradientContainer(this.colors, {super.key});
   final List<Color> colors;
+
   @override
   Widget build(context) {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(colors: colors, begin: ortala)),
-      child: Center(child: StyledText("hello Dünnya")),
+      child: Center(
+        child: DiceRoller(),
+      ),
     );
   }
 }
