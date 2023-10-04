@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class DiceRoller extends StatefulWidget {
-  DiceRoller({super.key});
+   DiceRoller({super.key});
 
   @override
   State<DiceRoller> createState() {
@@ -25,7 +25,7 @@ class _DiceRollerState extends State<DiceRoller> {
   Widget build(context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       AnimatedSwitcher(
-        duration: Duration(milliseconds: 300), //  süresi
+        duration: const Duration(milliseconds: 300), //  süresi
         child: Image.asset(
           "assets/images/dice-$currentDiceRoll.png",
           key: ValueKey<int>(
@@ -33,7 +33,7 @@ class _DiceRollerState extends State<DiceRoller> {
           width: 250,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 40,
       ),
       TextButton(
